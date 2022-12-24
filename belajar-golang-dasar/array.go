@@ -24,6 +24,7 @@ func main() {
 	 fmt.Println(values[1])
 	 fmt.Println(values[2])
 
+	//  len = panjang jumlah array bukan jumlah huruf
 	 fmt.Println(len(names))
 	 fmt.Println(len(values))
 
