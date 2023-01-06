@@ -7,25 +7,37 @@ type Customer struct {
 	Age int
 }
 
+// Dua bawah ini merupakan struct function
+func (customer Customer) sayHi(name string) {
+	fmt.Println("Hello", name, "My Name is", customer.Name)
+}
+
+func (a Customer) sayHuuu() {
+	fmt.Println("Huuu from", a.Name)
+}
+
 func main() {
 	var eko Customer
 	eko.Name = "Alvi"
 	eko.Address = "Indonesia"
 	eko.Age = 20
 
-	fmt.Println(eko.Name)
-	fmt.Println(eko.Address)
-	fmt.Println(eko.Age)
+	eko.sayHi("Joko")
+	eko.sayHuuu()
 
-	joko := Customer {
-		Name: "Joko",
-		Address: "Cirebon",
-		Age: 35,
-	}
+	// fmt.Println(eko.Name)
+	// fmt.Println(eko.Address)
+	// fmt.Println(eko.Age)
 
-	fmt.Println(joko)
+	// joko := Customer {
+	// 	Name: "Joko",
+	// 	Address: "Cirebon",
+	// 	Age: 35,
+	// }
 
-	// cara ini not recommended karena tergantung dengan posisinya struct
-	budi := Customer{"Budi", "Jakarta", 35}
-	fmt.Println(budi)
+	// fmt.Println(joko)
+
+	// // cara ini not recommended karena tergantung dengan posisinya struct
+	// budi := Customer{"Budi", "Jakarta", 35}
+	// fmt.Println(budi)
 }
